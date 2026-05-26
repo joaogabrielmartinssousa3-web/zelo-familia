@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.11.2 on win32)" generated="20260526 19:35:00.000" rpa="false" schemaversion="5">
+<suite id="s1" name="Usuarios" source="C:\ZeloFamilia\usuarios.robot">
+<kw name="Dado que o usuário acessa a tela de cadastro de usuários" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<status status="PASS" starttime="20260526 19:35:00.500" endtime="20260526 19:35:03.000"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<status status="PASS" starttime="20260526 19:35:03.000" endtime="20260526 19:35:03.200"/>
+</kw>
+<status status="PASS" starttime="20260526 19:35:00.500" endtime="20260526 19:35:03.200"/>
+</kw>
+<test id="s1-t1" name="CT01 - Deve realizar cadastro com dados válidos" line="14">
+<kw name="Dado que o usuário informa o nome">
+<arg>Carlos Silva</arg>
+<status status="PASS" starttime="20260526 19:35:03.210" endtime="20260526 19:35:03.400"/>
+</kw>
+<kw name="E informa a idade">
+<arg>65</arg>
+<status status="PASS" starttime="20260526 19:35:03.400" endtime="20260526 19:35:03.550"/>
+</kw>
+<kw name="Quando solicitar o cadastro do usuário">
+<status status="PASS" starttime="20260526 19:35:03.550" endtime="20260526 19:35:03.750"/>
+</kw>
+<kw name="Então o sistema deve apresentar a mensagem">
+<arg>Cadastro realizado com sucesso.</arg>
+<status status="PASS" starttime="20260526 19:35:03.750" endtime="20260526 19:35:03.900"/>
+</kw>
+<status status="PASS" starttime="20260526 19:35:03.200" endtime="20260526 19:35:03.900"/>
+</test>
+<test id="s1-t2" name="CT02 - Deve validar nome obrigatório" line="20">
+<kw name="Dado que o usuário informa o nome">
+<arg>${EMPTY}</arg>
+<status status="PASS" starttime="20260526 19:35:03.910" endtime="20260526 19:35:04.050"/>
+</kw>
+<kw name="E informa a idade">
+<arg>65</arg>
+<status status="PASS" starttime="20260526 19:35:04.050" endtime="20260526 19:35:04.150"/>
+</kw>
+<kw name="Quando solicitar o cadastro do usuário">
+<status status="PASS" starttime="20260526 19:35:04.150" endtime="20260526 19:35:04.300"/>
+</kw>
+<kw name="Então o sistema deve apresentar a mensagem">
+<arg>Nome obrigatório.</arg>
+<status status="PASS" starttime="20260526 19:35:04.300" endtime="20260526 19:35:04.450"/>
+</kw>
+<status status="PASS" starttime="20260526 19:35:03.910" endtime="20260526 19:35:04.450"/>
+</test>
+<test id="s1-t3" name="CT03 - Deve validar idade mínima insuficiente" line="26">
+<kw name="Dado que o usuário informa o nome">
+<arg>Carlos Silva</arg>
+<status status="PASS" starttime="20260526 19:35:04.460" endtime="20260526 19:35:04.600"/>
+</kw>
+<kw name="E informa a idade">
+<arg>11</arg>
+<status status="PASS" starttime="20260526 19:35:04.600" endtime="20260526 19:35:04.700"/>
+</kw>
+<kw name="Quando solicitar o cadastro do usuário">
+<status status="PASS" starttime="20260526 19:35:04.700" endtime="20260526 19:35:04.850"/>
+</kw>
+<kw name="Então o sistema deve apresentar a mensagem">
+<arg>Idade mínima insuficiente.</arg>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${MENSAGEM}</arg>
+<arg>${msg_esperada}</arg>
+<msg timestamp="20260526 19:35:04.900" level="FAIL">The text of element 'id=mensagemAlerta' should have been 'Idade mínima insuficiente.' but in reality it was 'Cadastro realizado com sucesso.'.</msg>
+<status status="FAIL" starttime="20260526 19:35:04.860" endtime="20260526 19:35:04.905"/>
+</kw>
+<status status="FAIL" starttime="20260526 19:35:04.850" endtime="20260526 19:35:04.910"/>
+</kw>
+<status status="FAIL" starttime="20260526 19:35:04.460" endtime="20260526 19:35:04.910">The text of element 'id=mensagemAlerta' should have been 'Idade mínima insuficiente.' but in reality it was 'Cadastro realizado com sucesso.'.</status>
+</test>
+<kw name="E fecha o navegador" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<status status="PASS" starttime="20260526 19:35:04.920" endtime="20260526 19:35:07.000"/>
+</kw>
+<status status="PASS" starttime="20260526 19:35:04.920" endtime="20260526 19:35:07.000"/>
+</kw>
+<status status="FAIL" starttime="20260526 19:35:00.000" endtime="20260526 19:35:07.000"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="1" skip="0" id="s1" name="Usuarios">Usuarios</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
