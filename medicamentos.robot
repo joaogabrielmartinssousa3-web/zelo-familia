@@ -9,7 +9,7 @@ Suite Teardown    E fecha o navegador
 ${URL}                 http://localhost:8080/cadastro-medicamentos
 ${BROWSER}             chrome
 
-${SELECT_IDOSO}        id=idIdoso
+${SELECT_IDOSO}        id=idUsuário
 ${INPUT_MEDICAMENTO}   id=nomeMedicamento
 ${INPUT_DOSAGEM}       id=dosagem
 ${BOTAO_CADASTRAR}     id=btnCadastrarMedicamento

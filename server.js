@@ -12,10 +12,10 @@ app.post('/api/medicamentos', (req, res) => {
     if (dosagem > 50) return res.status(400).json({ status: "erro", mensagem: "Dosagem excede limite" });
     res.status(201).json({ status: "sucesso", mensagem: "Medicamento registrado" });
 });
-app.post('/api/idosos', (req, res) => {
+app.post('/api/usuários', (req, res) => {
     const { idade } = req.body;
-    if (idade < 11) return res.status(400).json({ status: "erro", mensagem: "Idade insuficiente" }); // Bug proposital
-    res.status(201).json({ status: "sucesso", mensagem: "Idoso cadastrado" });
+    if (idade < 11) return res.status(400).json({ status: "erro", mensagem: "Idade insuficiente" }); 
+    res.status(201).json({ status: "sucesso", mensagem: "usuário cadastrado" });
 });
 
 // API 3 e 4 

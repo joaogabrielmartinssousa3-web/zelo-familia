@@ -9,9 +9,9 @@ Suite Teardown    E fecha o navegador
 ${URL}                 http://localhost:8080/cadastro-idosos
 ${BROWSER}             chrome
 
-${INPUT_NOME}          id=nomeIdoso
-${INPUT_IDADE}         id=idadeIdoso
-${BOTAO_CADASTRAR}     id=btnCadastrarIdoso
+${INPUT_NOME}          id=nomeUsuário
+${INPUT_IDADE}         id=idadeUsuário
+${BOTAO_CADASTRAR}     id=btnCadastrarUsuário
 ${MENSAGEM}            id=mensagemAlerta
 
 *** Test Cases ***
@@ -46,7 +46,7 @@ E informa a idade
     [Arguments]    ${idade}
     Input Text    ${INPUT_IDADE}    ${idade}
 
-Quando solicitar o cadastro do idoso
+Quando solicitar o cadastro do Usuário
     Click Button    ${BOTAO_CADASTRAR}
 
 Então o sistema deve apresentar a mensagem
