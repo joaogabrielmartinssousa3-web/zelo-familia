@@ -1,0 +1,96 @@
+{
+	"id": "4f3bf01a-8e98-4adb-beeb-f3bb4778839f",
+	"name": "Zelo-Familia - Usuarios",
+	"timestamp": "2026-05-28T21:31:11.248Z",
+	"collection_id": "55234666-711f104d-6096-4b21-b034-815cd3b7a227",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 4,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2026-05-28T21:31:10.506Z",
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "ae57a64c-27a5-4847-bd6c-4cfff95f7f94",
+			"name": "/Usuarios - Cadastro Válido",
+			"url": "http://localhost:8080/api/usuarios",
+			"time": 6,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Status code deve ser 201 Created": true,
+				"Retorno deve conter mensagem de sucesso": true
+			},
+			"testPassFailCounts": {
+				"Status code deve ser 201 Created": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Retorno deve conter mensagem de sucesso": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				6
+			],
+			"allTests": [
+				{
+					"Status code deve ser 201 Created": true,
+					"Retorno deve conter mensagem de sucesso": true
+				}
+			]
+		},
+		{
+			"id": "c15acdcc-d8f1-4448-b880-d7492e66fbe8",
+			"name": "/Usuarios - Idade Inválida",
+			"url": "http://localhost:8080/api/usuarios",
+			"time": 4,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Status code deve ser 400 Bad Request": true,
+				"Retorno deve acusar erro de idade": true
+			},
+			"testPassFailCounts": {
+				"Status code deve ser 400 Bad Request": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Retorno deve acusar erro de idade": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				4
+			],
+			"allTests": [
+				{
+					"Status code deve ser 400 Bad Request": true,
+					"Retorno deve acusar erro de idade": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 10,
+	"collection": {
+		"requests": [
+			{
+				"id": "ae57a64c-27a5-4847-bd6c-4cfff95f7f94",
+				"method": "POST"
+			},
+			{
+				"id": "c15acdcc-d8f1-4448-b880-d7492e66fbe8",
+				"method": "POST"
+			}
+		]
+	}
+}
