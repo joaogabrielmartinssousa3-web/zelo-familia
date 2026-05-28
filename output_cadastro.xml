@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.2 (Python 3.14.0 on win32)" generated="2026-05-28T20:01:02.509326" rpa="false" schemaversion="5">
+<suite id="s1" name="Cadastro" source="C:\Users\Admin\Documents\Teste jv\zelo-familia\cadastro.robot">
+<test id="s1-t1" name="CT01 - Deve realizar cadastro com sucesso" line="15">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-05-28T20:01:03.089509" level="INFO">Opening browser 'chrome' to base url 'http://localhost:3000/cadastro'.</msg>
+<msg time="2026-05-28T20:01:11.447331" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-05-28T20:01:11.448521" level="FAIL">WebDriverException: Message: unknown error: net::ERR_CONNECTION_REFUSED
+  (Session info: chrome=148.0.7778.179)
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff6ea0a7de5+14895]
+	chromedriver!GetHandleVerifier [0x7ff6ea0a7e50+14900]
+	chromedriver!(No symbol) [0x7ff6e9e0d5ad]
+	chromedriver!(No symbol) [0x7ff6e9e0a0e4]
+	chromedriver!(No symbol) [0x7ff6e9dfa4c1]
+	chromedriver!(No symbol) [0x7ff6e9dfc3af]
+	chromedriver!(No symbol) [0x7ff6e9dfaa63]
+	chromedriver!(No symbol) [0x7ff6e9dfa22b]
+	chromedriver!(No symbol) [0x7ff6e9df9ee1]
+	chromedriver!(No symbol) [0x7ff6e9df7b11]
+	chromedriver!(No symbol) [0x7ff6e9df8272]
+	chromedriver!(No symbol) [0x7ff6e9e11866]
+	chromedriver!(No symbol) [0x7ff6e9eb56c4]
+	chromedriver!(No symbol) [0x7ff6e9e9005a]
+	chromedriver!(No symbol) [0x7ff6e9eb486f]
+	chromedriver!(No symbol) [0x7ff6e9e59df8]
+	chromedriver!(No symbol) [0x7ff6e9e5ace3]
+	chromedriver!GetHandleVerifier [0x7ff6ea3bcc49+3296f9]
+	chromedriver!GetHandleVerifier [0x7ff6ea3b7375+323e25]
+	chromedriver!GetHandleVerifier [0x7ff6ea3dbc82+348732]
+	chromedriver!GetHandleVerifier [0x7ff6ea0c6045+32af5]
+	chromedriver!GetHandleVerifier [0x7ff6ea0cecec+3b79c]
+	chromedriver!GetHandleVerifier [0x7ff6ea0b1bc4+1e674]
+	chromedriver!GetHandleVerifier [0x7ff6ea0b1d54+1e804]
+	chromedriver!GetHandleVerifier [0x7ff6ea0960e7+2b97]
+	KERNEL32!BaseThreadInitThunk [0x7fff5b29e957+17]
+	ntdll!RtlUserThreadStart [0x7fff5cd4427c+2c]
+</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="FAIL" start="2026-05-28T20:01:03.083545" elapsed="8.380167">WebDriverException: Message: unknown error: net::ERR_CONNECTION_REFUSED
+  (Session info: chrome=148.0.7778.179)
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff6ea0a7de5+14895]
+	chromedriver!GetHandleVerifier [0x7ff6ea0a7e50+14900]
+	chromedriver!(No symbol) [0x7ff6e9e0d5ad]
+	chromedriver!(No symbol) [0x7ff6e9e0a0e4]
+	chromedriver!(No symbol) [0x7ff6e9dfa4c1]
+	chromedriver!(No symbol) [0x7ff6e9dfc3af]
+	chromedriver!(No symbol) [0x7ff6e9dfaa63]
+	chromedriver!(No symbol) [0x7ff6e9dfa22b]
+	chromedriver!(No symbol) [0x7ff6e9df9ee1]
+	chromedriver!(No symbol) [0x7ff6e9df7b11]
+	chromedriver!(No symbol) [0x7ff6e9df8272]
+	chromedriver!(No symbol) [0x7ff6e9e11866]
+	chromedriver!(No symbol) [0x7ff6e9eb56c4]
+	chromedriver!(No symbol) [0x7ff6e9e9005a]
+	chromedriver!(No symbol) [0x7ff6e9eb486f]
+	chromedriver!(No symbol) [0x7ff6e9e59df8]
+	chromedriver!(No symbol) [0x7ff6e9e5ace3]
+	chromedriver!GetHandleVerifier [0x7ff6ea3bcc49+3296f9]
+	chromedriver!GetHandleVerifier [0x7ff6ea3b7375+323e25]
+	chromedriver!GetHandleVerifier [0x7ff6ea3dbc82+348732]
+	chromedriver!GetHandleVerifier [0x7ff6ea0c6045+32af5]
+	chromedriver!GetHandleVerifier [0x7ff6ea0cecec+3b79c]
+	chromedriver!GetHandleVerifier [0x7ff6ea0b1bc4+1e674]
+	chromedriver!GetHandleVerifier [0x7ff6ea0b1d54+1e804]
+	chromedriver!GetHandleVerifier [0x7ff6ea0960e7+2b97]
+	KERNEL32!BaseThreadInitThunk [0x7fff5b29e957+17]
+	ntdll!RtlUserThreadStart [0x7fff5cd4427c+2c]
+</status>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>${INPUT_NOME}</arg>
+<arg>João Silva</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-05-28T20:01:11.465465" elapsed="0.000239"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>${INPUT_EMAIL}</arg>
+<arg>joao@email.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-05-28T20:01:11.466697" elapsed="0.000126"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<arg>${INPUT_SENHA}</arg>
+<arg>12345678</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-05-28T20:01:11.467709" elapsed="0.000164"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<arg>${INPUT_CONFIRMAR}</arg>
+<arg>12345678</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-05-28T20:01:11.468741" elapsed="0.000155"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<arg>${BOTAO_CADASTRAR}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-05-28T20:01:11.469681" elapsed="0.000102"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<arg>${MENSAGEM}</arg>
+<arg>Cadastro realizado com sucesso</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="NOT RUN" start="2026-05-28T20:01:11.470475" elapsed="0.000227"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" start="2026-05-28T20:01:11.471609" elapsed="0.000205"/>
+</kw>
+<status status="FAIL" start="2026-05-28T20:01:03.082247" elapsed="8.390805">WebDriverException: Message: unknown error: net::ERR_CONNECTION_REFUSED
+  (Session info: chrome=148.0.7778.179)
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff6ea0a7de5+14895]
+	chromedriver!GetHandleVerifier [0x7ff6ea0a7e50+14900]
+	chromedriver!(No symbol) [0x7ff6e9e0d5ad]
+	chromedriver!(No symbol) [0x7ff6e9e0a0e4]
+	chromedriver!(No symbol) [0x7ff6e9dfa4c1]
+	chromedriver!(No symbol) [0x7ff6e9dfc3af]
+	chromedriver!(No symbol) [0x7ff6e9dfaa63]
+	chromedriver!(No symbol) [0x7ff6e9dfa22b]
+	chromedriver!(No symbol) [0x7ff6e9df9ee1]
+	chromedriver!(No symbol) [0x7ff6e9df7b11]
+	chromedriver!(No symbol) [0x7ff6e9df8272]
+	chromedriver!(No symbol) [0x7ff6e9e11866]
+	chromedriver!(No symbol) [0x7ff6e9eb56c4]
+	chromedriver!(No symbol) [0x7ff6e9e9005a]
+	chromedriver!(No symbol) [0x7ff6e9eb486f]
+	chromedriver!(No symbol) [0x7ff6e9e59df8]
+	chromedriver!(No symbol) [0x7ff6e9e5ace3]
+	chromedriver!GetHandleVerifier [0x7ff6ea3bcc49+3296f9]
+	chromedriver!GetHandleVerifier [0x7ff6ea3b7375+323e25]
+	chromedriver!GetHandleVerifier [0x7ff6ea3dbc82+348732]
+	chromedriver!GetHandleVerifier [0x7ff6ea0c6045+32af5]
+	chromedriver!GetHandleVerifier [0x7ff6ea0cecec+3b79c]
+	chromedriver!GetHandleVerifier [0x7ff6ea0b1bc4+1e674]
+	chromedriver!GetHandleVerifier [0x7ff6ea0b1d54+1e804]
+	chromedriver!GetHandleVerifier [0x7ff6ea0960e7+2b97]
+	KERNEL32!BaseThreadInitThunk [0x7fff5b29e957+17]
+	ntdll!RtlUserThreadStart [0x7fff5cd4427c+2c]
+</status>
+</test>
+<test id="s1-t2" name="CT02 - Deve validar nome obrigatório" line="25">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-05-28T20:01:11.483615" level="INFO">Opening browser 'chrome' to base url 'http://localhost:3000/cadastro'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-05-28T20:01:11.482273" elapsed="3.666763"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-05-28T20:01:15.152526" level="INFO">Typing text 'joao@email.com' into text field 'id=email'.</msg>
+<msg time="2026-05-28T20:01:15.160384" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=148.0.7778.179)
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff6ea0a7de5+14895]
+	chromedriver!GetHandleVerifier [0x7ff6ea0a7e50+14900]
+	chromedriver!(No symbol) [0x7ff6e9e0d5ad]
+	chromedriver!(No symbol) [0x7ff6e9de40f2]
+	chromedriver!(No symbol) [0x7ff6e9e96f56]
+	chromedriver!(No symbol) [0x7ff6e9eb4172]
+	chromedriver!(No symbol) [0x7ff6e9e59df8]
+	chromedriver!(No symbol) [0x7ff6e9e5ace3]
+	chromedriver!GetHandleVerifier [0x7ff6ea3bcc49+3296f9]
+	chromedriver!GetHandleVerifier [0x7ff6ea3b7375+323e25]
+	chromedriver!GetHandleVerifier [0x7ff6ea3dbc82+348732]
+	chromedriver!GetHandleVerifier [0x7ff6ea0c6045+32af5]
+	chromedriver!GetHandleVerifier [0x7ff6ea0cecec+3b79c]
+	chromedriver!GetHandleVerifier [0x7ff6ea0b1bc4+1e674]
+	chromedriver!GetHandleVerifier [0x7ff6ea0b1d54+1e804]
+	chromedriver!GetHandleVerifier [0x7ff6ea0960e7+2b97]
+	KERNEL32!BaseThreadInitThunk [0x7fff5b29e957+17]
+	ntdll!RtlUserThreadStart [0x7fff5cd4427c+2c]
+</msg>
+<msg time="2026-05-28T20:01:15.161597" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=148.0.7778.179)
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff6ea0a7de5+14895]
+	chromedriver!GetHandleVerifier [0x7ff6ea0a7e50+14900]
+	chromedriver!(No symbol) [0x7ff6e9e0d5ad]
+	chromedriver!(No symbol) [0x7ff6e9de40f2]
+	chromedriver!(No symbol) [0x7ff6e9e96f56]
+	chromedriver!(No symbol) [0x7ff6e9eb4172]
+	chromedriver!(No symbol) [0x7ff6e9e59df8]
+	chromedriver!(No symbol) [0x7ff6e9e5ace3]
+	chromedriver!GetHandleVerifier [0x7ff6ea3bcc49+3296f9]
+	chromedriver!GetHandleVerifier [0x7ff6ea3b7375+323e25]
+	chromedriver!GetHandleVerifier [0x7ff6ea3dbc82+348732]
+	chromedriver!GetHandleVerifier [0x7ff6ea0c6045+32af5]
+	chromedriver!GetHandleVerifier [0x7ff6ea0cecec+3b79c]
+	chromedriver!GetHandleVerifier [0x7ff6ea0b1bc4+1e674]
+	chromedriver!GetHandleVerifier [0x7ff6ea0b1d54+1e804]
+	chromedriver!GetHandleVerifier [0x7ff6ea0960e7+2b97]
+	KERNEL32!BaseThreadInitThunk [0x7fff5b29e957+17]
+	ntdll!RtlUserThreadStart [0x7fff5cd4427c+2c]
+</msg>
+<arg>${INPUT_EMAIL}</arg>
+<arg>joao@email.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="FAIL" start="2026-05-28T20:01:15.150230" elapsed="0.032225">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=148.0.7778.179)
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff6ea0a7de5+14895]
+	chromedriver!GetHandleVerifier [0x7ff6ea0a7e50+14900]
+	chromedriver!(No symbol) [0x7ff6e9e0d5ad]
+	chromedriver!(No symbol) [0x7ff6e9de40f2]
+	chromedriver!(No symbol) [0x7ff6e9e96f56]
+	chromedriver!(No symbol) [0x7ff6e9eb4172]
+	chromedriver!(No symbol) [0x7ff6e9e59df8]
+	chromedriver!(No symbol) [0x7ff6e9e5ace3]
+	chromedriver!GetHandleVerifier [0x7ff6ea3bcc49+3296f9]
+	chromedriver!GetHandleVerifier [0x7ff6ea3b7375+323e25]
+	chromedriver!GetHandleVerifier [0x7ff6ea3dbc82+348732]
+	chromedriver!GetHandleVerifier [0x7ff6ea0c6045+32af5]
+	chromedriver!GetHandleVerifier [0x7ff6ea0cecec+3b79c]
+	chromedriver!GetHandleVerifier [0x7ff6ea0b1bc4+1e674]
+	chromedriver!GetHandleVerifier [0x7ff6ea0b1d54+1e804]
+	chromedriver!GetHandleVerifier [0x7ff6ea0960e7+2b97]
+	KERNEL32!BaseThreadInitThunk [0x7fff5b29e957+17]
+	ntdll!RtlUserThreadStart [0x7fff5cd4427c+2c]
+</status>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<arg>${INPUT_SENHA}</arg>
+<arg>12345678</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-05-28T20:01:15.188626" elapsed="0.000901"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<arg>${INPUT_CONFIRMAR}</arg>
+<arg>12345678</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-05-28T20:01:15.191360" elapsed="0.000144"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<arg>${BOTAO_CADASTRAR}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-05-28T20:01:15.205191" elapsed="0.000449"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<arg>${MENSAGEM}</arg>
+<arg>Nome obrigatório</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="NOT RUN" start="2026-05-28T20:01:15.206279" elapsed="0.000078"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" start="2026-05-28T20:01:15.206796" elapsed="0.000069"/>
+</kw>
+<status status="FAIL" start="2026-05-28T20:01:11.479127" elapsed="3.729020">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=148.0.7778.179)
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff6ea0a7de5+14895]
+	chromedriver!GetHandleVerifier [0x7ff6ea0a7e50+14900]
+	chromedriver!(No symbol) [0x7ff6e9e0d5ad]
+	chromedriver!(No symbol) [0x7ff6e9de40f2]
+	chromedriver!(No symbol) [0x7ff6e9e96f56]
+	chromedriver!(No symbol) [0x7ff6e9eb4172]
+	chromedriver!(No symbol) [0x7ff6e9e59df8]
+	chromedriver!(No symbol) [0x7ff6e9e5ace3]
+	chromedriver!GetHandleVerifier [0x7ff6ea3bcc49+3296f9]
+	chromedriver!GetHandleVerifier [0x7ff6ea3b7375+323e25]
+	chromedriver!GetHandleVerifier [0x7ff6ea3dbc82+348732]
+	chromedriver!GetHandleVerifier [0x7ff6ea0c6045+32af5]
+	chromedriver!GetHandleVerifier [0x7ff6ea0cecec+3b79c]
+	chromedriver!GetHandleVerifier [0x7ff6ea0b1bc4+1e674]
+	chromedriver!GetHandleVerifier [0x7ff6ea0b1d54+1e804]
+	chromedriver!GetHandleVerifier [0x7ff6ea0960e7+2b97]
+	KERNEL32!BaseThreadInitThunk [0x7fff5b29e957+17]
+	ntdll!RtlUserThreadStart [0x7fff5cd4427c+2c]
+</status>
+</test>
+<status status="FAIL" start="2026-05-28T20:01:02.510919" elapsed="12.707271"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="2" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Cadastro" id="s1" pass="0" fail="2" skip="0">Cadastro</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2026-05-28T20:01:15.160384" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=148.0.7778.179)
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff6ea0a7de5+14895]
+	chromedriver!GetHandleVerifier [0x7ff6ea0a7e50+14900]
+	chromedriver!(No symbol) [0x7ff6e9e0d5ad]
+	chromedriver!(No symbol) [0x7ff6e9de40f2]
+	chromedriver!(No symbol) [0x7ff6e9e96f56]
+	chromedriver!(No symbol) [0x7ff6e9eb4172]
+	chromedriver!(No symbol) [0x7ff6e9e59df8]
+	chromedriver!(No symbol) [0x7ff6e9e5ace3]
+	chromedriver!GetHandleVerifier [0x7ff6ea3bcc49+3296f9]
+	chromedriver!GetHandleVerifier [0x7ff6ea3b7375+323e25]
+	chromedriver!GetHandleVerifier [0x7ff6ea3dbc82+348732]
+	chromedriver!GetHandleVerifier [0x7ff6ea0c6045+32af5]
+	chromedriver!GetHandleVerifier [0x7ff6ea0cecec+3b79c]
+	chromedriver!GetHandleVerifier [0x7ff6ea0b1bc4+1e674]
+	chromedriver!GetHandleVerifier [0x7ff6ea0b1d54+1e804]
+	chromedriver!GetHandleVerifier [0x7ff6ea0960e7+2b97]
+	KERNEL32!BaseThreadInitThunk [0x7fff5b29e957+17]
+	ntdll!RtlUserThreadStart [0x7fff5cd4427c+2c]
+</msg>
+</errors>
+</robot>

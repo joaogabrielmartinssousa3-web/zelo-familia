@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.2 (Python 3.14.0 on win32)" generated="2026-05-28T20:13:34.482518" rpa="false" schemaversion="5">
+<suite id="s1" name="Validacao" source="C:\Users\Admin\Documents\Teste jv\zelo-familia\validacao.robot">
+<test id="s1-t1" name="CT02 - Deve validar email inválido" line="15">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-05-28T20:13:35.008526" level="INFO">Opening browser 'chrome' to base url 'http://localhost:3000/cadastro'.</msg>
+<msg time="2026-05-28T20:13:41.093460" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-05-28T20:13:41.094321" level="FAIL">WebDriverException: Message: unknown error: net::ERR_CONNECTION_REFUSED
+  (Session info: chrome=148.0.7778.179)
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff6ea0a7de5+14895]
+	chromedriver!GetHandleVerifier [0x7ff6ea0a7e50+14900]
+	chromedriver!(No symbol) [0x7ff6e9e0d5ad]
+	chromedriver!(No symbol) [0x7ff6e9e0a0e4]
+	chromedriver!(No symbol) [0x7ff6e9dfa4c1]
+	chromedriver!(No symbol) [0x7ff6e9dfc3af]
+	chromedriver!(No symbol) [0x7ff6e9dfaa63]
+	chromedriver!(No symbol) [0x7ff6e9dfa22b]
+	chromedriver!(No symbol) [0x7ff6e9df9ee1]
+	chromedriver!(No symbol) [0x7ff6e9df7b11]
+	chromedriver!(No symbol) [0x7ff6e9df8272]
+	chromedriver!(No symbol) [0x7ff6e9e11866]
+	chromedriver!(No symbol) [0x7ff6e9eb56c4]
+	chromedriver!(No symbol) [0x7ff6e9e9005a]
+	chromedriver!(No symbol) [0x7ff6e9eb486f]
+	chromedriver!(No symbol) [0x7ff6e9e59df8]
+	chromedriver!(No symbol) [0x7ff6e9e5ace3]
+	chromedriver!GetHandleVerifier [0x7ff6ea3bcc49+3296f9]
+	chromedriver!GetHandleVerifier [0x7ff6ea3b7375+323e25]
+	chromedriver!GetHandleVerifier [0x7ff6ea3dbc82+348732]
+	chromedriver!GetHandleVerifier [0x7ff6ea0c6045+32af5]
+	chromedriver!GetHandleVerifier [0x7ff6ea0cecec+3b79c]
+	chromedriver!GetHandleVerifier [0x7ff6ea0b1bc4+1e674]
+	chromedriver!GetHandleVerifier [0x7ff6ea0b1d54+1e804]
+	chromedriver!GetHandleVerifier [0x7ff6ea0960e7+2b97]
+	KERNEL32!BaseThreadInitThunk [0x7fff5b29e957+17]
+	ntdll!RtlUserThreadStart [0x7fff5cd4427c+2c]
+</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="FAIL" start="2026-05-28T20:13:35.008192" elapsed="6.095870">WebDriverException: Message: unknown error: net::ERR_CONNECTION_REFUSED
+  (Session info: chrome=148.0.7778.179)
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff6ea0a7de5+14895]
+	chromedriver!GetHandleVerifier [0x7ff6ea0a7e50+14900]
+	chromedriver!(No symbol) [0x7ff6e9e0d5ad]
+	chromedriver!(No symbol) [0x7ff6e9e0a0e4]
+	chromedriver!(No symbol) [0x7ff6e9dfa4c1]
+	chromedriver!(No symbol) [0x7ff6e9dfc3af]
+	chromedriver!(No symbol) [0x7ff6e9dfaa63]
+	chromedriver!(No symbol) [0x7ff6e9dfa22b]
+	chromedriver!(No symbol) [0x7ff6e9df9ee1]
+	chromedriver!(No symbol) [0x7ff6e9df7b11]
+	chromedriver!(No symbol) [0x7ff6e9df8272]
+	chromedriver!(No symbol) [0x7ff6e9e11866]
+	chromedriver!(No symbol) [0x7ff6e9eb56c4]
+	chromedriver!(No symbol) [0x7ff6e9e9005a]
+	chromedriver!(No symbol) [0x7ff6e9eb486f]
+	chromedriver!(No symbol) [0x7ff6e9e59df8]
+	chromedriver!(No symbol) [0x7ff6e9e5ace3]
+	chromedriver!GetHandleVerifier [0x7ff6ea3bcc49+3296f9]
+	chromedriver!GetHandleVerifier [0x7ff6ea3b7375+323e25]
+	chromedriver!GetHandleVerifier [0x7ff6ea3dbc82+348732]
+	chromedriver!GetHandleVerifier [0x7ff6ea0c6045+32af5]
+	chromedriver!GetHandleVerifier [0x7ff6ea0cecec+3b79c]
+	chromedriver!GetHandleVerifier [0x7ff6ea0b1bc4+1e674]
+	chromedriver!GetHandleVerifier [0x7ff6ea0b1d54+1e804]
+	chromedriver!GetHandleVerifier [0x7ff6ea0960e7+2b97]
+	KERNEL32!BaseThreadInitThunk [0x7fff5b29e957+17]
+	ntdll!RtlUserThreadStart [0x7fff5cd4427c+2c]
+</status>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" start="2026-05-28T20:13:41.105690" elapsed="0.000216"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>${INPUT_NOME}</arg>
+<arg>João Silva</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-05-28T20:13:41.106918" elapsed="0.000137"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>${INPUT_EMAIL}</arg>
+<arg>joaoemail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-05-28T20:13:41.108110" elapsed="0.000145"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<arg>${INPUT_SENHA}</arg>
+<arg>12345678</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-05-28T20:13:41.109096" elapsed="0.000664"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<arg>${INPUT_CONFIRMAR}</arg>
+<arg>12345678</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-05-28T20:13:41.110956" elapsed="0.000096"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<arg>${BOTAO_CADASTRAR}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-05-28T20:13:41.112445" elapsed="0.000170"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<arg>${MENSAGEM}</arg>
+<arg>Email inválido</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="NOT RUN" start="2026-05-28T20:13:41.114159" elapsed="0.000125"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" start="2026-05-28T20:13:41.115202" elapsed="0.000142"/>
+</kw>
+<status status="FAIL" start="2026-05-28T20:13:35.006570" elapsed="6.110784">WebDriverException: Message: unknown error: net::ERR_CONNECTION_REFUSED
+  (Session info: chrome=148.0.7778.179)
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff6ea0a7de5+14895]
+	chromedriver!GetHandleVerifier [0x7ff6ea0a7e50+14900]
+	chromedriver!(No symbol) [0x7ff6e9e0d5ad]
+	chromedriver!(No symbol) [0x7ff6e9e0a0e4]
+	chromedriver!(No symbol) [0x7ff6e9dfa4c1]
+	chromedriver!(No symbol) [0x7ff6e9dfc3af]
+	chromedriver!(No symbol) [0x7ff6e9dfaa63]
+	chromedriver!(No symbol) [0x7ff6e9dfa22b]
+	chromedriver!(No symbol) [0x7ff6e9df9ee1]
+	chromedriver!(No symbol) [0x7ff6e9df7b11]
+	chromedriver!(No symbol) [0x7ff6e9df8272]
+	chromedriver!(No symbol) [0x7ff6e9e11866]
+	chromedriver!(No symbol) [0x7ff6e9eb56c4]
+	chromedriver!(No symbol) [0x7ff6e9e9005a]
+	chromedriver!(No symbol) [0x7ff6e9eb486f]
+	chromedriver!(No symbol) [0x7ff6e9e59df8]
+	chromedriver!(No symbol) [0x7ff6e9e5ace3]
+	chromedriver!GetHandleVerifier [0x7ff6ea3bcc49+3296f9]
+	chromedriver!GetHandleVerifier [0x7ff6ea3b7375+323e25]
+	chromedriver!GetHandleVerifier [0x7ff6ea3dbc82+348732]
+	chromedriver!GetHandleVerifier [0x7ff6ea0c6045+32af5]
+	chromedriver!GetHandleVerifier [0x7ff6ea0cecec+3b79c]
+	chromedriver!GetHandleVerifier [0x7ff6ea0b1bc4+1e674]
+	chromedriver!GetHandleVerifier [0x7ff6ea0b1d54+1e804]
+	chromedriver!GetHandleVerifier [0x7ff6ea0960e7+2b97]
+	KERNEL32!BaseThreadInitThunk [0x7fff5b29e957+17]
+	ntdll!RtlUserThreadStart [0x7fff5cd4427c+2c]
+</status>
+</test>
+<status status="FAIL" start="2026-05-28T20:13:34.484087" elapsed="6.636945"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Validacao" id="s1" pass="0" fail="1" skip="0">Validacao</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

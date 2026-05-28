@@ -12,7 +12,7 @@ app.post('/api/medicamentos', (req, res) => {
     if (dosagem > 50) return res.status(400).json({ status: "erro", mensagem: "Dosagem excede limite" });
     res.status(201).json({ status: "sucesso", mensagem: "Medicamento registrado" });
 });
-app.post('/api/usuários', (req, res) => {
+app.post('/api/usuarios', (req, res) => {
     const { idade } = req.body;
     if (idade < 11) return res.status(400).json({ status: "erro", mensagem: "Idade insuficiente" }); 
     res.status(201).json({ status: "sucesso", mensagem: "usuário cadastrado" });
