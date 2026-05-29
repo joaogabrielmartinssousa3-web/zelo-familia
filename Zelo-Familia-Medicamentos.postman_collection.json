@@ -1,0 +1,101 @@
+{
+  "info": {
+    "_postman_id": "5e650021-9eb4-438c-ab69-26313cf6549f",
+    "name": "Zelo-Familia-Medicamentos",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "55234666",
+    "_collection_link": "https://go.postman.co/collection/55234666-5e650021-9eb4-438c-ab69-26313cf6549f?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "/Medicamentos - Cadastro",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code deve ser 201\", function () {\r",
+              "        pm.response.to.have.status(201);\r",
+              "    });\r",
+              "\r",
+              "    pm.test(\"Mensagem de sucesso\", function () {\r",
+              "        var json = pm.response.json();\r",
+              "        pm.expect(json.mensagem).to.eql(\"Medicamento cadastrado com sucesso\");\r",
+              "    });"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"nome\": \"Dipirona\",\r\n  \"dosagem_ml\": 15\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/medicamentos",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "medicamentos"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "/Medicamentos - Buscar",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code deve ser 200\", function () {\r",
+              "    pm.response.to.have.status(200);\r",
+              "});\r",
+              "\r",
+              "pm.test(\"Deve retornar o nome do medicamento\", function () {\r",
+              "    var json = pm.response.json();\r",
+              "    pm.expect(json.dados).to.have.property('nome');\r",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/medicamentos/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "medicamentos",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}

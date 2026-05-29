@@ -1,0 +1,29 @@
+{
+	"id": "a663c23d-2669-4281-8dd6-95c178c28452",
+	"name": "Zelo-Familia-Medicamentos",
+	"timestamp": "2026-05-29T01:29:14.639Z",
+	"collection_id": "55234666-5e650021-9eb4-438c-ab69-26313cf6549f",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 0,
+	"delay": 0,
+	"persist": true,
+	"status": "error",
+	"startedAt": "2026-05-29T01:29:13.884Z",
+	"totalFail": 4,
+	"results": [],
+	"count": 1,
+	"totalTime": 0,
+	"collection": {
+		"requests": [
+			{
+				"id": "2e2afec8-318b-4272-8772-276a3e8f7726",
+				"method": "POST"
+			},
+			{
+				"id": "2ba52da1-542e-4242-b92f-51ff04853dd9",
+				"method": "GET"
+			}
+		]
+	}
+}
