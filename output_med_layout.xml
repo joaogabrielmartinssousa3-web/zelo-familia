@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.2 (Python 3.14.0 on win32)" generated="2026-05-28T22:26:17.550928" rpa="false" schemaversion="5">
+<suite id="s1" name="Med Layout" source="C:\Users\Admin\Documents\Teste jg\zelo-familia\med_layout.robot">
+<test id="s1-t1" name="CT01 - Validar elementos visuais da tela de Medicamentos" line="10">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-05-28T22:26:17.896805" level="INFO">Opening browser 'chrome' to base url 'http://localhost:8080/index.html'.</msg>
+<msg time="2026-05-28T22:26:21.703187" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-8.png"&gt;&lt;img src="selenium-screenshot-8.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-05-28T22:26:21.703729" level="FAIL">WebDriverException: Message: unknown error: net::ERR_CONNECTION_REFUSED
+  (Session info: chrome=148.0.7778.179)
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff66edd7de5+14895]
+	chromedriver!GetHandleVerifier [0x7ff66edd7e50+14900]
+	chromedriver!(No symbol) [0x7ff66eb3d5ad]
+	chromedriver!(No symbol) [0x7ff66eb3a0e4]
+	chromedriver!(No symbol) [0x7ff66eb2a4c1]
+	chromedriver!(No symbol) [0x7ff66eb2c3af]
+	chromedriver!(No symbol) [0x7ff66eb2aa63]
+	chromedriver!(No symbol) [0x7ff66eb2a22b]
+	chromedriver!(No symbol) [0x7ff66eb29ee1]
+	chromedriver!(No symbol) [0x7ff66eb27b11]
+	chromedriver!(No symbol) [0x7ff66eb28272]
+	chromedriver!(No symbol) [0x7ff66eb41866]
+	chromedriver!(No symbol) [0x7ff66ebe56c4]
+	chromedriver!(No symbol) [0x7ff66ebc005a]
+	chromedriver!(No symbol) [0x7ff66ebe486f]
+	chromedriver!(No symbol) [0x7ff66eb89df8]
+	chromedriver!(No symbol) [0x7ff66eb8ace3]
+	chromedriver!GetHandleVerifier [0x7ff66f0ecc49+3296f9]
+	chromedriver!GetHandleVerifier [0x7ff66f0e7375+323e25]
+	chromedriver!GetHandleVerifier [0x7ff66f10bc82+348732]
+	chromedriver!GetHandleVerifier [0x7ff66edf6045+32af5]
+	chromedriver!GetHandleVerifier [0x7ff66edfecec+3b79c]
+	chromedriver!GetHandleVerifier [0x7ff66ede1bc4+1e674]
+	chromedriver!GetHandleVerifier [0x7ff66ede1d54+1e804]
+	chromedriver!GetHandleVerifier [0x7ff66edc60e7+2b97]
+	KERNEL32!BaseThreadInitThunk [0x7fff5b29e957+17]
+	ntdll!RtlUserThreadStart [0x7fff5cd4427c+2c]
+</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="FAIL" start="2026-05-28T22:26:17.896521" elapsed="3.814923">WebDriverException: Message: unknown error: net::ERR_CONNECTION_REFUSED
+  (Session info: chrome=148.0.7778.179)
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff66edd7de5+14895]
+	chromedriver!GetHandleVerifier [0x7ff66edd7e50+14900]
+	chromedriver!(No symbol) [0x7ff66eb3d5ad]
+	chromedriver!(No symbol) [0x7ff66eb3a0e4]
+	chromedriver!(No symbol) [0x7ff66eb2a4c1]
+	chromedriver!(No symbol) [0x7ff66eb2c3af]
+	chromedriver!(No symbol) [0x7ff66eb2aa63]
+	chromedriver!(No symbol) [0x7ff66eb2a22b]
+	chromedriver!(No symbol) [0x7ff66eb29ee1]
+	chromedriver!(No symbol) [0x7ff66eb27b11]
+	chromedriver!(No symbol) [0x7ff66eb28272]
+	chromedriver!(No symbol) [0x7ff66eb41866]
+	chromedriver!(No symbol) [0x7ff66ebe56c4]
+	chromedriver!(No symbol) [0x7ff66ebc005a]
+	chromedriver!(No symbol) [0x7ff66ebe486f]
+	chromedriver!(No symbol) [0x7ff66eb89df8]
+	chromedriver!(No symbol) [0x7ff66eb8ace3]
+	chromedriver!GetHandleVerifier [0x7ff66f0ecc49+3296f9]
+	chromedriver!GetHandleVerifier [0x7ff66f0e7375+323e25]
+	chromedriver!GetHandleVerifier [0x7ff66f10bc82+348732]
+	chromedriver!GetHandleVerifier [0x7ff66edf6045+32af5]
+	chromedriver!GetHandleVerifier [0x7ff66edfecec+3b79c]
+	chromedriver!GetHandleVerifier [0x7ff66ede1bc4+1e674]
+	chromedriver!GetHandleVerifier [0x7ff66ede1d54+1e804]
+	chromedriver!GetHandleVerifier [0x7ff66edc60e7+2b97]
+	KERNEL32!BaseThreadInitThunk [0x7fff5b29e957+17]
+	ntdll!RtlUserThreadStart [0x7fff5cd4427c+2c]
+</status>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" start="2026-05-28T22:26:21.712658" elapsed="0.000102"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<arg>id=input-dosagem</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-05-28T22:26:21.713466" elapsed="0.000128"/>
+</kw>
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<var>${placeholder}</var>
+<arg>id=input-dosagem</arg>
+<arg>placeholder</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="NOT RUN" start="2026-05-28T22:26:21.714094" elapsed="0.000086"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${placeholder}</arg>
+<arg>Digite a dosagem (ml)</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="NOT RUN" start="2026-05-28T22:26:21.714595" elapsed="0.000070"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<arg>id=btn-salvar-med</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-05-28T22:26:21.714951" elapsed="0.000036"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" start="2026-05-28T22:26:21.715489" elapsed="0.000088"/>
+</kw>
+<status status="FAIL" start="2026-05-28T22:26:17.895303" elapsed="3.821062">WebDriverException: Message: unknown error: net::ERR_CONNECTION_REFUSED
+  (Session info: chrome=148.0.7778.179)
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff66edd7de5+14895]
+	chromedriver!GetHandleVerifier [0x7ff66edd7e50+14900]
+	chromedriver!(No symbol) [0x7ff66eb3d5ad]
+	chromedriver!(No symbol) [0x7ff66eb3a0e4]
+	chromedriver!(No symbol) [0x7ff66eb2a4c1]
+	chromedriver!(No symbol) [0x7ff66eb2c3af]
+	chromedriver!(No symbol) [0x7ff66eb2aa63]
+	chromedriver!(No symbol) [0x7ff66eb2a22b]
+	chromedriver!(No symbol) [0x7ff66eb29ee1]
+	chromedriver!(No symbol) [0x7ff66eb27b11]
+	chromedriver!(No symbol) [0x7ff66eb28272]
+	chromedriver!(No symbol) [0x7ff66eb41866]
+	chromedriver!(No symbol) [0x7ff66ebe56c4]
+	chromedriver!(No symbol) [0x7ff66ebc005a]
+	chromedriver!(No symbol) [0x7ff66ebe486f]
+	chromedriver!(No symbol) [0x7ff66eb89df8]
+	chromedriver!(No symbol) [0x7ff66eb8ace3]
+	chromedriver!GetHandleVerifier [0x7ff66f0ecc49+3296f9]
+	chromedriver!GetHandleVerifier [0x7ff66f0e7375+323e25]
+	chromedriver!GetHandleVerifier [0x7ff66f10bc82+348732]
+	chromedriver!GetHandleVerifier [0x7ff66edf6045+32af5]
+	chromedriver!GetHandleVerifier [0x7ff66edfecec+3b79c]
+	chromedriver!GetHandleVerifier [0x7ff66ede1bc4+1e674]
+	chromedriver!GetHandleVerifier [0x7ff66ede1d54+1e804]
+	chromedriver!GetHandleVerifier [0x7ff66edc60e7+2b97]
+	KERNEL32!BaseThreadInitThunk [0x7fff5b29e957+17]
+	ntdll!RtlUserThreadStart [0x7fff5cd4427c+2c]
+</status>
+</test>
+<doc>Teste de Interface 2 - Validação visual da aba de Medicamentos</doc>
+<status status="FAIL" start="2026-05-28T22:26:17.552778" elapsed="4.165346"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Med Layout" id="s1" pass="0" fail="1" skip="0">Med Layout</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

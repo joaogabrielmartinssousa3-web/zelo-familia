@@ -12,6 +12,14 @@ app.post('/api/medicamentos', (req, res) => {
     if (dosagem > 50) return res.status(400).json({ status: "erro", mensagem: "Dosagem excede limite" });
     res.status(201).json({ status: "sucesso", mensagem: "Medicamento registrado" });
 });
+
+
+app.get('/api/medicamentos/:id', (req, res) => {
+    const id = req.params.id;
+    if (id === '1') return res.status(200).json({ status: "sucesso", dados: { id: 1, nome: "Dipirona", dosagem: 15 } });
+    return res.status(404).json({ status: "erro", mensagem: "Medicamento não encontrado" });
+});
+
 app.post('/api/usuarios', (req, res) => {
     const { idade } = req.body;
     if (idade < 11) return res.status(400).json({ status: "erro", mensagem: "Idade insuficiente" }); 
