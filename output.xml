@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.2 (Python 3.14.3 on win32)" generated="2026-06-01T16:06:05.711265" rpa="false" schemaversion="5">
+<suite id="s1" name="Teste Botao" source="C:\Users\kauad\OneDrive\Documentos\teste api\teste_botao.robot">
+<kw name="Dado que o usuário acessa o sistema Zelo-Família" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-06-01T16:06:06.273561" level="INFO">Opening browser 'chrome' to base url 'http://127.0.0.1:5500/index.html'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-06-01T16:06:06.273186" elapsed="1.432536"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-06-01T16:06:07.708913" elapsed="0.031694"/>
+</kw>
+<status status="PASS" start="2026-06-01T16:06:06.271867" elapsed="1.469168"/>
+</kw>
+<test id="s1-t1" name="CT01 - Deve marcar tarefa como concluída com sucesso" line="15">
+<kw name="Quando clicar no botão de concluir tarefa">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-06-01T16:06:07.745010" level="INFO">Clicking button 'id=btn-concluir-tarefa'.</msg>
+<arg>${BTN_CONCLUIR}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-06-01T16:06:07.744147" elapsed="0.190943"/>
+</kw>
+<status status="PASS" start="2026-06-01T16:06:07.743334" elapsed="0.192142"/>
+</kw>
+<kw name="Então o sistema deve exibir o alerta">
+<kw name="Handle Alert" owner="SeleniumLibrary">
+<msg time="2026-06-01T16:06:07.938086" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<msg time="2026-06-01T16:06:07.946425" level="INFO">${mensagem_alerta} = Tarefa concluída</msg>
+<var>${mensagem_alerta}</var>
+<arg>action=ACCEPT</arg>
+<doc>Handles the current alert and returns its message.</doc>
+<status status="PASS" start="2026-06-01T16:06:07.937610" elapsed="0.008926"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${mensagem_alerta}</arg>
+<arg>${mensagem_esperada}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-06-01T16:06:07.946938" elapsed="0.001116"/>
+</kw>
+<arg>Tarefa concluída</arg>
+<status status="PASS" start="2026-06-01T16:06:07.936681" elapsed="0.011560"/>
+</kw>
+<status status="PASS" start="2026-06-01T16:06:07.741382" elapsed="0.207491"/>
+</test>
+<test id="s1-t2" name="CT02 - Deve validar restrição ao excluir tarefa" line="19">
+<kw name="Quando clicar no botão de excluir tarefa">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-06-01T16:06:07.952898" level="INFO">Clicking button 'id=btn-excluir-tarefa'.</msg>
+<arg>${BTN_EXCLUIR}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-06-01T16:06:07.952047" elapsed="0.181776"/>
+</kw>
+<status status="PASS" start="2026-06-01T16:06:07.951191" elapsed="0.182935"/>
+</kw>
+<kw name="Então o sistema deve exibir o alerta">
+<kw name="Handle Alert" owner="SeleniumLibrary">
+<msg time="2026-06-01T16:06:08.136485" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<msg time="2026-06-01T16:06:08.148901" level="INFO">${mensagem_alerta} = Erro 403: Sem permissão</msg>
+<var>${mensagem_alerta}</var>
+<arg>action=ACCEPT</arg>
+<doc>Handles the current alert and returns its message.</doc>
+<status status="PASS" start="2026-06-01T16:06:08.135839" elapsed="0.013186"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${mensagem_alerta}</arg>
+<arg>${mensagem_esperada}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-06-01T16:06:08.149547" elapsed="0.001665"/>
+</kw>
+<arg>Erro 403: Sem permissão</arg>
+<status status="PASS" start="2026-06-01T16:06:08.134970" elapsed="0.016768"/>
+</kw>
+<status status="PASS" start="2026-06-01T16:06:07.949976" elapsed="0.202450"/>
+</test>
+<kw name="E fecha o navegador" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-06-01T16:06:08.155315" elapsed="2.220817"/>
+</kw>
+<status status="PASS" start="2026-06-01T16:06:08.154837" elapsed="2.221660"/>
+</kw>
+<status status="PASS" start="2026-06-01T16:06:05.714183" elapsed="4.662529"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Teste Botao" id="s1" pass="2" fail="0" skip="0">Teste Botao</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
