@@ -1,0 +1,84 @@
+{
+	"id": "a9c2d5ec-bbb4-43d1-9cf9-562838be9148",
+	"name": "My Collection",
+	"timestamp": "2026-06-01T19:51:13.193Z",
+	"collection_id": "55358660-a4c2e63f-1303-4b29-beeb-d09c4cb2075e",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 2,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2026-06-01T19:51:11.920Z",
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "3b77c16e-2045-436e-9231-329d6c9d39c2",
+			"name": "Get data",
+			"url": "http://postman-echo.com/get",
+			"time": 327,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				327
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "21434c2d-bf90-4940-beb6-6918f7f9cc68",
+			"name": "Post data",
+			"url": "http://postman-echo.com/post",
+			"time": 205,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Successful POST request": true
+			},
+			"testPassFailCounts": {
+				"Successful POST request": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				205
+			],
+			"allTests": [
+				{
+					"Successful POST request": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 532,
+	"collection": {
+		"requests": [
+			{
+				"id": "3b77c16e-2045-436e-9231-329d6c9d39c2",
+				"method": "GET"
+			},
+			{
+				"id": "21434c2d-bf90-4940-beb6-6918f7f9cc68",
+				"method": "POST"
+			}
+		]
+	}
+}
